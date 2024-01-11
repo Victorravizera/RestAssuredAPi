@@ -27,6 +27,8 @@
 
 > 3- Adicionar validações para Name e Job para numeros e caracteres especiais. (Levar em consideração a distribuição do projeto, pois alguns paises utilizam nomes com caracteres especiais).
 
+> 4- Realizar testes não funcionais, recomendaria um teste de carga para evitar problemas futuros e se em caso de necessidade testes de segurança.
+
 
 
 
