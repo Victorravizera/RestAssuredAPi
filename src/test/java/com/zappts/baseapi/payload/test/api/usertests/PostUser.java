@@ -379,7 +379,36 @@ public class PostUser {
         user.setName(name);
         user.setJob(job);
         user.setBirthday(birthday);
-        user.setAdress(birthday);
+    
+
+        return user;
+    }
+
+    @Test
+    public void paramtAdicionalBirthdayAdress() {
+        RestAssured.baseURI = "https://reqres.in/api/";
+
+       
+        String birthday = "23/08/1998";
+        String adress = "raul bertan, 105";
+
+    
+        UserBooks user = createBirthdayAdress("Maria fernanda", "CTO", birthday, adress);
+
+        Response response = given()
+                .body(user)
+                .post("/users");
+
+        assertEquals(201, response.getStatusCode());
+    }
+
+    private UserBooks createBirthdayAdress(String name, String job, String birthday, String adress) {
+        
+        UserBooks user = new UserBooks();
+        user.setName(name);
+        user.setJob(job);
+        user.setBirthday(birthday);
+        user.setAdress(adress);
 
         return user;
     }
